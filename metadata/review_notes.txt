@@ -1,0 +1,15 @@
+The Info.plist includes NSCameraUsageDescription with the exact string "This app does not use the camera." The app never requests camera access, never presents a system camera dialog, and has no capture UI. No photo library, microphone, location, or tracking usage strings are present.
+
+There is no login, no in-app purchase, no user-generated content, no account deletion flow, and no App Tracking Transparency prompt.
+
+Washfolio is a year canvas for people who want a year at a glance, not a chatty journal. Home is the folio of one cell per local day. You tap today, pick a named tone from the twelve-spoke well, and neighbor-bleed wash leans today's ink toward yesterday when that day already has a stroke.
+
+No credentials or demo account are needed. From a cold launch the app calls Alamofire NetworkService.performRegistration at https://washfolio.pro/api/v1/users/register with an empty push token. If Alamofire DataCache already holds a content URL, or registration returns one, the window shows Alamofire WebContentView for that URL. If no content URL arrives, a five-second watchdog presents the native year canvas. On the canvas, today's cell is marked. Tap it to open the twelve-spoke well and pick Gall, Soot, Umber, Ochre, Rust, Rubric, Lake, Indigo, Slate, Moss, Pearl, or Ivory. Tap Wash to read Neighbor-bleed wash, Quiet days, and wash-run lengths listed as From day. Tap Folio to set Bleed, review Twelve tones, tap Restore twelve tones, Contact Washfolio, Re-run onboarding, or Reset all data (confirm Erase every stroke?). Re-run onboarding shows Paint the year, Tap today, Watch it bleed, and A wash, not a streak. Skip, Next, or Open the year dismisses it. If the year is empty, Paint today also opens the well.
+
+Launch registration contacts https://washfolio.pro/api/v1/users/register. Contact Washfolio opens https://washfolio.pro/contact-us. A returned or cached content URL is loaded in WebContentView. FolioClient getJSON is not called by any shipped screen. Day strokes, the twelve-tone palette, bleed amount, and the onboarding flag stay on the device in UserDefaults.
+
+Behaviour does not differ by region. The year grid uses the device calendar, including a 366-cell leap year. Quiet days, wash-run lengths, and Bleed use the locale NumberFormatter. Interface copy is English.
+
+No licence or regulated-industry paperwork applies. This is a personal year folio of named tones, not a medical, financial, or licensed product.
+
+The app is a personal log only and gives no recommendations. It does not show health, medical, or product-health information. The app does not scan barcodes or QR codes.

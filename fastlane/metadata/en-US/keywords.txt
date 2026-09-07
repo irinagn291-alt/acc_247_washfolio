@@ -1,0 +1,1 @@
+year,canvas,folio,mood,tone,wash,bleed,calendar,journal,almanac,palette,daily,paint,quiet,stroke

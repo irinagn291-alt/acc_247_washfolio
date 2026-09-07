@@ -1,0 +1,12 @@
+Washfolio is a year canvas for people who want a year at a glance, not a chatty journal. Home is the folio: one cell per local day. Empty days stay blank.
+
+• Tap today's marked cell to open the twelve-spoke well and paint a stroke
+• Twelve named tones: Gall, Soot, Umber, Ochre, Rust, Rubric, Lake, Indigo, Slate, Moss, Pearl, Ivory
+• Neighbor-bleed wash: if yesterday has a stroke, today's ink leans toward it. An isolated day stays pure
+• Folio sets the Bleed amount and lists Twelve tones. Restore twelve tones returns the default inks
+• Wash lists Neighbor-bleed wash, Quiet days, and wash-run lengths. A gap ends a run
+• Folio also has Contact Washfolio, Re-run onboarding, and Reset all data
+• Onboarding pages: Paint the year, Tap today, Watch it bleed, A wash, not a streak
+• There is no tab bar and no entry list. Strokes stay on this device
+
+The year is the home, not a list of notes.
