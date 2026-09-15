@@ -21,9 +21,9 @@ struct WashBleedView: View {
             if folio.strokes.isEmpty {
                 FolioEmptyState(
                     image: "wfo_TwistHero",
-                    headline: "The year is empty.",
-                    line: "The first stroke is yours.",
-                    actionTitle: "Paint today",
+                    headline: "No marks yet.",
+                    line: "Mark how today felt. The year keeps it.",
+                    actionTitle: "Mark today",
                     action: onPaint
                 )
             } else {
@@ -44,12 +44,12 @@ struct WashBleedView: View {
             Image("wfo_TwistHero")
                 .resizable()
                 .scaledToFit()
-                .frame(maxHeight: FolioChrome.space(20))
+                .frame(maxHeight: FolioChrome.space(16))
                 .accessibilityHidden(true)
             Text("Neighbor-bleed wash")
                 .font(FolioType.Step.title.font)
                 .foregroundStyle(FolioChrome.Palette.ink)
-            Text("Today leans toward yesterday. An isolated day stays pure. A gap ends the run.")
+            Text("Today leans toward yesterday, so a stretch reads as one wash. A lone day stays the state you picked.")
                 .font(FolioType.Step.body.font)
                 .foregroundStyle(FolioChrome.Palette.muted)
             HStack {

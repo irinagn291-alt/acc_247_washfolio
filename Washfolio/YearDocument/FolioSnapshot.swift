@@ -70,7 +70,9 @@ enum FolioCodec {
             byDay[stroke.dayOfYear] = stroke
         }
         next.strokes = byDay.values.sorted { $0.dayOfYear < $1.dayOfYear }
-        if (try? ToneWell.validated(snapshot.palette)) == nil {
+        if snapshot.palette.map(\.spokenName) == ToneWell.legacyInkNames {
+            next.palette = ToneWell.defaultPalette
+        } else if (try? ToneWell.validated(snapshot.palette)) == nil {
             next.palette = ToneWell.defaultPalette
         }
         if (try? ToneWell.settingBleed(snapshot.bleedAmount)) == nil {

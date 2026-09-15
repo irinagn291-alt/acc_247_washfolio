@@ -5,6 +5,7 @@ enum FolioKey {
     static let snapshot = "wfo.folio.snapshot"
     static let backup = "wfo.folio.snapshot.backup"
     static let demo = "wfo.demo.v1"
+    static let reminder = "wfo.reminder.v1"
 }
 
 /// Role: Year document. Persistence seam. The UI never touches UserDefaults.
@@ -15,6 +16,8 @@ protocol FolioPersisting: Sendable {
     func flush() async throws
     func resetAllData() async throws
     func seedDemoIfNeeded(year: Int, now: Date, calendar: Calendar) async -> FolioSnapshot?
+    func loadReminder() async -> Bool
+    func saveReminder(_ enabled: Bool) async
 }
 
 /// Role: Year document. One Codable snapshot in UserDefaults under a single key.
@@ -77,6 +80,17 @@ actor FolioStore: FolioPersisting {
         let defaults = preferenceDefaults()
         defaults.removeObject(forKey: FolioKey.snapshot)
         defaults.removeObject(forKey: FolioKey.backup)
+        defaults.removeObject(forKey: FolioKey.reminder)
+        defaults.synchronize()
+    }
+
+    func loadReminder() async -> Bool {
+        preferenceDefaults().bool(forKey: FolioKey.reminder)
+    }
+
+    func saveReminder(_ enabled: Bool) async {
+        let defaults = preferenceDefaults()
+        defaults.set(enabled, forKey: FolioKey.reminder)
         defaults.synchronize()
     }
 

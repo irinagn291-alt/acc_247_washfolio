@@ -32,6 +32,32 @@ final class FolioDocumentViewTests: XCTestCase {
         XCTAssertEqual(painted.cells.filter(\.painted).count, 1)
         XCTAssertEqual(folio.strokes.count, 1)
         XCTAssertEqual(painted.year, folio.year)
+        XCTAssertEqual(painted.cells.count, folio.daysInYear)
+        XCTAssertTrue(painted.cells.contains(where: { $0.isToday }))
+        XCTAssertEqual(Set(painted.cells.map(\.month)).count, 12)
+    }
+
+    func test_yearLayoutReadsAsTwelveMonthAlmanac() {
+        let phone = FolioYearLayout.metrics(in: CGSize(width: 358, height: 600))
+        XCTAssertEqual(phone.columns, 3)
+        XCTAssertEqual(phone.rows, 4)
+        XCTAssertGreaterThan(phone.cellWidth, 8)
+        XCTAssertGreaterThan(phone.cellHeight, 8)
+
+        let pad = FolioYearLayout.metrics(in: CGSize(width: 980, height: 1100))
+        XCTAssertEqual(pad.columns, 4)
+        XCTAssertEqual(pad.rows, 3)
+
+        let january = FolioYearLayout.monthOrigin(month: 1, metrics: phone)
+        XCTAssertEqual(january, .zero)
+        let april = FolioYearLayout.monthOrigin(month: 4, metrics: phone)
+        XCTAssertEqual(april.x, 0)
+        XCTAssertGreaterThan(april.y, 0)
+
+        let januaryHeader = FolioYearLayout.monthHeaderRect(month: 1, metrics: phone)
+        XCTAssertGreaterThanOrEqual(januaryHeader.height, FolioChrome.tap)
+        XCTAssertEqual(FolioYearLayout.month(at: CGPoint(x: 8, y: 8), metrics: phone), 1)
+        XCTAssertEqual(FolioYearLayout.month(at: april, metrics: phone), 4)
     }
 
     func test_todayCellExpandsHitTo44() {
@@ -39,12 +65,18 @@ final class FolioDocumentViewTests: XCTestCase {
         today.apply(
             FolioGridCell(
                 dayOfYear: 1,
+                month: 1,
+                dayOfMonth: 1,
+                weekdayColumn: 0,
+                weekRow: 0,
                 painted: false,
                 red: 0,
                 green: 0,
                 blue: 0,
                 spokenName: "Blank",
-                isToday: true
+                toneIndex: nil,
+                isToday: true,
+                isFuture: false
             )
         )
         XCTAssertTrue(today.point(inside: CGPoint(x: 22, y: 9), with: nil))
@@ -52,12 +84,18 @@ final class FolioDocumentViewTests: XCTestCase {
         blank.apply(
             FolioGridCell(
                 dayOfYear: 2,
+                month: 1,
+                dayOfMonth: 2,
+                weekdayColumn: 1,
+                weekRow: 0,
                 painted: false,
                 red: 0,
                 green: 0,
                 blue: 0,
                 spokenName: "Blank",
-                isToday: false
+                toneIndex: nil,
+                isToday: false,
+                isFuture: false
             )
         )
         XCTAssertFalse(blank.point(inside: CGPoint(x: 22, y: 9), with: nil))
@@ -120,6 +158,13 @@ final class FolioReviewTests: XCTestCase {
 final class ScreenFactoryTests: XCTestCase {
     func test_mainScreensConstructWithNoArguments() {
         _ = FolioCanvas()
+        _ = FolioMonthBoard(
+            frame: FolioGridFrame(year: 2026, days: 0, today: 1, cells: []),
+            month: 6,
+            selectedDay: nil,
+            focusTone: nil,
+            onSelect: { _ in }
+        )
         _ = WashSheet()
         _ = WashView()
         _ = FolioSettings()

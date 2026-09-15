@@ -7,6 +7,7 @@ enum ScreenCatalog {
         [
             ("foliocanvas", AnyView(FolioCanvas())),
             ("foliosettings", AnyView(FolioSettings())),
+            ("washsheet", AnyView(WashSheet())),
             ("root", AnyView(ContentView()))
         ]
     }

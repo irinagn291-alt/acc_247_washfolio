@@ -36,4 +36,5 @@ enum FolioError: Error, Equatable, Sendable {
     case invalidBleed
     case invalidInk
     case dayOutsideYear
+    case dayInFuture
 }

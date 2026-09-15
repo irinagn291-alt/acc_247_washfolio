@@ -17,26 +17,26 @@ struct FolioOnboarding: View {
                 case 0:
                     pageView(
                         image: "wfo_Onboarding1",
-                        title: "Paint the year",
-                        line: "The folio is 365 cells. Empty days stay blank. Home is the year, not a list."
+                        title: "Mark the day",
+                        line: "One tap for how today felt. Missed a day? Mark it later. The year becomes weather, not a list."
                     )
                 case 1:
                     pageView(
                         image: "wfo_Onboarding2",
-                        title: "Tap today",
-                        line: "A twelve-spoke well opens on the canvas. Each tone has a spoken name."
+                        title: "Twelve states",
+                        line: "Dead, Lit, Focused, Rest — named states, not a 1 to 5 score. Colour is never the only signal."
                     )
                 case 2:
                     pageView(
                         image: "wfo_Onboarding3",
-                        title: "Watch it bleed",
-                        line: "If yesterday has a stroke, today's ink leans toward it. An isolated day stays pure."
+                        title: "Days bleed",
+                        line: "If yesterday has a mark, today leans toward it. A lone day stays exactly what you picked."
                     )
                 default:
                     pageView(
                         image: "wfo_TwistHero",
-                        title: "A wash, not a streak",
-                        line: "Analytics count wash-run lengths. A gap restarts. Nothing punishes a missed day."
+                        title: "Washes, not streaks",
+                        line: "A wash is how long a stretch lasted. A gap starts a new one. Missing a day is not a failure."
                     )
                 }
             }

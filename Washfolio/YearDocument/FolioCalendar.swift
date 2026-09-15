@@ -39,4 +39,34 @@ enum FolioCalendar {
     static func yesterday(of date: Date, calendar: Calendar = .current) -> Date? {
         calendar.date(byAdding: .day, value: -1, to: calendar.startOfDay(for: date))
     }
+
+    static func date(year: Int, month: Int, day: Int, calendar: Calendar = .current) -> Date? {
+        calendar.date(from: DateComponents(year: year, month: month, day: day))
+    }
+
+    static func month(_ date: Date, calendar: Calendar = .current) -> Int {
+        calendar.component(.month, from: calendar.startOfDay(for: date))
+    }
+
+    static func dayOfMonth(_ date: Date, calendar: Calendar = .current) -> Int {
+        calendar.component(.day, from: calendar.startOfDay(for: date))
+    }
+
+    static func daysInMonth(_ month: Int, year: Int, calendar: Calendar = .current) -> Int {
+        guard let first = date(year: year, month: month, day: 1, calendar: calendar),
+              let range = calendar.range(of: .day, in: .month, for: first)
+        else {
+            return 30
+        }
+        return range.count
+    }
+
+    static func weekdayColumn(of date: Date, calendar: Calendar = .current) -> Int {
+        let weekday = calendar.component(.weekday, from: calendar.startOfDay(for: date))
+        return (weekday - calendar.firstWeekday + 7) % 7
+    }
+
+    static func clampMonth(_ month: Int) -> Int {
+        min(12, max(1, month))
+    }
 }
