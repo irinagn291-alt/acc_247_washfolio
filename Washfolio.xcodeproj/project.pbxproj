@@ -12,10 +12,12 @@
 		06B0D7052CED9F8283967955 /* WashBleedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DF7CCC3CFABA39AEC197F /* WashBleedView.swift */; };
 		08D3A277317AD58CF09521F6 /* FolioStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF08AAE78CCE3AEB9E0BDE /* FolioStoreTests.swift */; };
 		0A638272EFA5826EB4A3D281 /* FolioPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0B44CC6F1ECEC549918D0C /* FolioPreview.swift */; };
+		0F04500A36F671B3297F7F20 /* FolioCensus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2314424C8D1DA44FCB3E8 /* FolioCensus.swift */; };
 		0FEE6B05BF740840958953D1 /* AlmanacFolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2772A9620215A10A3B06D440 /* AlmanacFolioTests.swift */; };
 		1A1A99FADBAEA9A3DBF73867 /* FolioFigures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CF76AB2EA33AB80A459BF /* FolioFigures.swift */; };
 		23FF6DC6E3F4F0F10AFF2BC2 /* WashRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D77735D8FCA2992578C74BB /* WashRun.swift */; };
 		2554468D7BB19F136CD25046 /* FolioType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63259DCAB7218B123E629B23 /* FolioType.swift */; };
+		27593F1961579227203C58CD /* FolioReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39064CE9D48F0060F688F6 /* FolioReminder.swift */; };
 		40626E6741F92A5BC46FD400 /* FolioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0ED099E6A10F6F32FAC2C9 /* FolioClient.swift */; };
 		4B4EECE28263826C6F375DE7 /* WashfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B656A2A34AA0B3989C08B344 /* WashfolioApp.swift */; };
 		4CD84F12F5887389CDB54B90 /* FolioTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3763DB9E3B7AFBFF4F530 /* FolioTypeTests.swift */; };
@@ -39,6 +41,7 @@
 		BE83FEF39C18A47FC823BBC6 /* FolioChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F02136197792A584E101F6 /* FolioChrome.swift */; };
 		C8050C0A77E6CCC55AA4F86A /* WashSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D8270ADA39A3895D4AC490 /* WashSheet.swift */; };
 		CB97D33A8A3D217B4533F4AF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F9BE4AE9C658A9A157E803C9 /* Alamofire */; };
+		D6559A9A6E5A24DF05124EEC /* FolioMonthBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AC930DF24A61706A8C956 /* FolioMonthBoard.swift */; };
 		D6FE1F3FF64FC6E79108E562 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134ACD8220127DC4BD3B5 /* ContentView.swift */; };
 		E419E1F1F652641D0C1098F3 /* QuietStreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39C5003FD3A9483F435A01F /* QuietStreak.swift */; };
 		E5C35AA03BD171A193BD0932 /* FolioSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911467EDE610992F3E7F4BAD /* FolioSettings.swift */; };
@@ -76,9 +79,11 @@
 		1D0B44CC6F1ECEC549918D0C /* FolioPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioPreview.swift; sourceTree = "<group>"; };
 		1F4AC91E1AB9514FA69DC87B /* FolioSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioSnapshot.swift; sourceTree = "<group>"; };
 		2772A9620215A10A3B06D440 /* AlmanacFolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacFolioTests.swift; sourceTree = "<group>"; };
+		2FC2314424C8D1DA44FCB3E8 /* FolioCensus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioCensus.swift; sourceTree = "<group>"; };
 		300EA88C71ACEED6FA122F95 /* DayStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStroke.swift; sourceTree = "<group>"; };
 		329AE0E03E83423B367506E9 /* NeighborBleedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighborBleedTests.swift; sourceTree = "<group>"; };
 		3677AB73E1F24029D856522E /* WashfolioShotTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WashfolioShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A39064CE9D48F0060F688F6 /* FolioReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioReminder.swift; sourceTree = "<group>"; };
 		3A50E73AA99E4B2ABDB0A805 /* FolioStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioStore.swift; sourceTree = "<group>"; };
 		3CB670FE9C55E86367E8554A /* WashfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashfolioTests.swift; sourceTree = "<group>"; };
 		4887C3506AA65B7C1B302BE4 /* FolioDocumentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioDocumentViewTests.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		CA94817BE3AF0C89ADD4ACB8 /* FamilyInvariantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyInvariantTests.swift; sourceTree = "<group>"; };
 		D0D4A54DAAD6D258AEA707EB /* ScreenShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotTests.swift; sourceTree = "<group>"; };
 		E3B3763DB9E3B7AFBFF4F530 /* FolioTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioTypeTests.swift; sourceTree = "<group>"; };
+		E63AC930DF24A61706A8C956 /* FolioMonthBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioMonthBoard.swift; sourceTree = "<group>"; };
 		F6A94AC557B7CDCF31B2BB25 /* FolioWell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioWell.swift; sourceTree = "<group>"; };
 		F84AEAC502E801A8055FA016 /* FolioCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioCalendar.swift; sourceTree = "<group>"; };
 		F9DF458CE8B7DF052A5DEDFC /* FolioReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolioReview.swift; sourceTree = "<group>"; };
@@ -170,12 +176,15 @@
 				BDB66B7A52830FC52B59CE1F /* AlmanacFolio.swift */,
 				F84AEAC502E801A8055FA016 /* FolioCalendar.swift */,
 				1C40554BBAF8E4AA218242D8 /* FolioCanvas.swift */,
+				2FC2314424C8D1DA44FCB3E8 /* FolioCensus.swift */,
 				67F02136197792A584E101F6 /* FolioChrome.swift */,
 				6A0ED099E6A10F6F32FAC2C9 /* FolioClient.swift */,
 				5869B560D2DBE2609651578D /* FolioEmptyState.swift */,
 				B23CF76AB2EA33AB80A459BF /* FolioFigures.swift */,
+				E63AC930DF24A61706A8C956 /* FolioMonthBoard.swift */,
 				B10EE1034E50BDA51688B0AB /* FolioOnboarding.swift */,
 				1D0B44CC6F1ECEC549918D0C /* FolioPreview.swift */,
+				3A39064CE9D48F0060F688F6 /* FolioReminder.swift */,
 				F9DF458CE8B7DF052A5DEDFC /* FolioReview.swift */,
 				911467EDE610992F3E7F4BAD /* FolioSettings.swift */,
 				1F4AC91E1AB9514FA69DC87B /* FolioSnapshot.swift */,
@@ -361,12 +370,15 @@
 				55DA669605F5E88945B26932 /* DayStroke.swift in Sources */,
 				69D83E36DB225E04855EB032 /* FolioCalendar.swift in Sources */,
 				033B00BA42221677C3521314 /* FolioCanvas.swift in Sources */,
+				0F04500A36F671B3297F7F20 /* FolioCensus.swift in Sources */,
 				BE83FEF39C18A47FC823BBC6 /* FolioChrome.swift in Sources */,
 				40626E6741F92A5BC46FD400 /* FolioClient.swift in Sources */,
 				0651289FF89A2324238FC7EF /* FolioEmptyState.swift in Sources */,
 				1A1A99FADBAEA9A3DBF73867 /* FolioFigures.swift in Sources */,
+				D6559A9A6E5A24DF05124EEC /* FolioMonthBoard.swift in Sources */,
 				B33C8F4E4D8FAF5EDE75C8FE /* FolioOnboarding.swift in Sources */,
 				0A638272EFA5826EB4A3D281 /* FolioPreview.swift in Sources */,
+				27593F1961579227203C58CD /* FolioReminder.swift in Sources */,
 				92BD55B4B388B96090494D5D /* FolioReview.swift in Sources */,
 				E5C35AA03BD171A193BD0932 /* FolioSettings.swift in Sources */,
 				82F74839D8E4E7BB4023EE55 /* FolioSnapshot.swift in Sources */,
@@ -573,7 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Washfolio;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -588,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.washfolio.year;
 				PRODUCT_NAME = Washfolio;
 				SDKROOT = iphoneos;
@@ -668,7 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Washfolio;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -683,7 +695,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.washfolio.year;
 				PRODUCT_NAME = Washfolio;
 				SDKROOT = iphoneos;
